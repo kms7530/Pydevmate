@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 import requests, json, sys
 
-api_key = {'Authorization': 'Token c98bf7b164323f4cb535d88384511e5d39532c64427c4bf2fef73f4f7fee702d'}
+api_key = {'Authorization': 'Token lala'}
 
 # 인자값 없을시
 if len(sys.argv) == 1 :
@@ -30,7 +30,7 @@ if str(total) == '1' :
 
 elif str(total) == '0' :
 	# 개정 생성
-	datas = {'data' : {'email' : email, 'first_name' : last_name, 'last_name' : first_name, 'note' : ''}}
+	datas = {'data' : {'email' : email, 'first_name' : first_name, 'last_name' : last_name, 'note' : ''}}
 
 	r = requests.post('https://public-api.devmate.com/v2/customers/', 
 		data =json.dumps(datas),
